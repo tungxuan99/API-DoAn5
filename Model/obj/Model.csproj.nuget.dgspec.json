@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\DOAN5\\API-DoAn5\\Model\\Model.csproj": {}
+    "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj": {}
   },
   "projects": {
-    "F:\\DOAN5\\API-DoAn5\\Model\\Model.csproj": {
+    "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\DOAN5\\API-DoAn5\\Model\\Model.csproj",
+        "projectUniqueName": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "F:\\DOAN5\\API-DoAn5\\Model\\Model.csproj",
+        "projectPath": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\xuant\\.nuget\\packages\\",
-        "outputPath": "F:\\DOAN5\\API-DoAn5\\Model\\obj\\",
+        "outputPath": "F:\\DOAN5\\DoAn5-API\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xuant\\AppData\\Roaming\\NuGet\\NuGet.Config",

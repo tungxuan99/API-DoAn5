@@ -1,0 +1,14 @@
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\Model.dll
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\Model.pdb
+F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
