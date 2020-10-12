@@ -46,6 +46,18 @@ namespace API
             services.AddTransient<IHocSinhBusiness, HocSinhBusiness>();
             services.AddTransient<IDiemDanhRepository, DiemDanhRepository>();
             services.AddTransient<IDiemDanhBusiness, DiemDanhBusiness>();
+            services.AddTransient<ICTDiemDanhRepository, CTDiemDanhRepository>();
+            services.AddTransient<ICTDiemDanhBusiness, CTDiemDanhBusiness>();
+            services.AddTransient<IDiemRepository, DiemRepository>();
+            services.AddTransient<IDiemBusiness, DiemBusiness>();
+            services.AddTransient<IGiaoVienRepository, GiaoVienRepository>();
+            services.AddTransient<IGiaoVienBusiness, GiaoVienBusiness>();
+            services.AddTransient<ILopHocRepository, LopHocRepository>();
+            services.AddTransient<ILopHocBusiness, LopHocBusiness>();
+            services.AddTransient<IMonHocRepository, MonHocRepository>();
+            services.AddTransient<IMonHocBusiness, MonHocBusiness>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<IUsersBusiness, UsersBusiness>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

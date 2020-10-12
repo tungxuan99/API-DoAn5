@@ -20,7 +20,7 @@ namespace API.Controllers
             _tintucBusiness = hoaDonBusiness;
         }
 
-        [Route("create-hoa-don")]
+        [Route("create-tin-tuc")]
         [HttpPost]
         public TinTucModel CreateTinTuc([FromBody] TinTucModel model)
         {
