@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BLL;
+using BLL.Interfaces;
 using DAL;
 using DAL.Helper;
 using DAL.Helper.Interfaces;
@@ -41,6 +42,10 @@ namespace API
             services.AddTransient<IDatabaseHelper, DatabaseHelper>();
             services.AddTransient<ITinTucRepository, TinTucRepository>();
             services.AddTransient<ITinTucBusiness, TinTucBusiness>();
+            services.AddTransient<IHocSinhRepository, HocSinhRepository>();
+            services.AddTransient<IHocSinhBusiness, HocSinhBusiness>();
+            services.AddTransient<IDiemDanhRepository, DiemDanhRepository>();
+            services.AddTransient<IDiemDanhBusiness, DiemDanhBusiness>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,52 +1,51 @@
 ﻿using DAL.Helper;
 using DAL.Helper.Interfaces;
-using DAL;
-using System;
 using Model;
+using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
+using System.Text;
 
 namespace DAL
 {
-    public partial class TinTucRepository : ITinTucRepository
+    public partial class DiemDanhRepository : IDiemDanhRepository
     {
         private IDatabaseHelper _dbHelper;
-        public TinTucRepository(IDatabaseHelper dbHelper)
+        public DiemDanhRepository(IDatabaseHelper dbHelper)
         {
             _dbHelper = dbHelper;
         }
 
-        public bool Create(TinTucModel model)
+        public bool Create(DiemDanhModel model)
         {
             string msgError = "";
             return true;
         }
-        public TinTucModel GetDatabyID(string id)
+        public DiemDanhModel GetDatabyID(string id)
         {
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "tin_tuc_get_by_id",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "diem_danh_get_by_id",
                      "@item_id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<TinTucModel>().FirstOrDefault();
+                return dt.ConvertTo<DiemDanhModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public List<TinTucModel> GetDataAll()
+        public List<DiemDanhModel> GetDataAll()
         {
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "tin_tuc_all");
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "diem_danh_all");
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<TinTucModel>().ToList();
+                return dt.ConvertTo<DiemDanhModel>().ToList();
             }
             catch (Exception ex)
             {
