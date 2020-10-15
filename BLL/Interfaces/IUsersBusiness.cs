@@ -7,6 +7,7 @@ namespace BLL
 {
     public partial interface IUsersBusiness
     {
+        UsersModel Authenticate(string username, string password);
         bool Create(UsersModel model);
         UsersModel GetDatabyID(string id);
         List<UsersModel> GetDataAll();

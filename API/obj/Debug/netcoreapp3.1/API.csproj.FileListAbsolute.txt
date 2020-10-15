@@ -34,3 +34,15 @@ F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\BLL.pdb
 F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Model.pdb
 F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\DAL.pdb
 F:\DOAN5\DoAn5-API\API\obj\Debug\netcoreapp3.1\API.csproj.CopyComplete
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\DOAN5\DoAn5-API\API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

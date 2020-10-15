@@ -52,5 +52,22 @@ namespace DAL
                 throw ex;
             }
         }
+        public UsersModel GetUser(string username, string password)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "users_get_by_username_password",
+                     "@username", username,
+                     "@password", password);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<UsersModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
