@@ -11,5 +11,6 @@ namespace DAL
         bool Create(UsersModel model);
         UsersModel GetDatabyID(string id);
         List<UsersModel> GetDataAll();
+        List<UsersModel> Search(int pageIndex, int pageSize, out long total, string hoten, string taikhoan);
     }
 }

@@ -58,6 +58,10 @@ namespace BLL
             return user;
 
         }
+        public List<UsersModel> Search(int pageIndex, int pageSize, out long total, string hoten, string taikhoan)
+        {
+            return _res.Search(pageIndex, pageSize, out total, hoten, taikhoan);
+        }
     }
 
 }
