@@ -19,15 +19,73 @@ namespace DAL
         public bool Create(UsersModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "users_create",
+                
+                "@users_HoTen", model.HoTen,
+                "@users_username", model.username,
+                "@users_password", model.password,
+                "@users_level", model.level);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        public UsersModel GetDatabyID(string id)
+
+        public bool Delete(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "users_delete",
+                "@users_id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(UsersModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "users_update",
+                "@users_id", model.id,
+                "@users_HoTen", model.HoTen,
+                "@users_username", model.username,
+                "@users_password", model.password,
+                "@users_level", model.level);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public UsersModel GetDatabyID(int id)
         {
             string msgError = "";
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "users_get_by_id",
-                     "@item_id", id);
+                     "@users_id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<UsersModel>().FirstOrDefault();

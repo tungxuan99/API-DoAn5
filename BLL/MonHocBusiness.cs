@@ -25,6 +25,10 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public List<MonHocModel> Search(int pageIndex, int pageSize, out long total, string tenmon)
+        {
+            return _res.Search(pageIndex, pageSize, out total, tenmon);
+        }
     }
 
 }

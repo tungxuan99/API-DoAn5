@@ -52,5 +52,28 @@ namespace DAL
                 throw ex;
             }
         }
+        public List<CTDiemDanhModel> Search(int pageIndex, int pageSize, out long total, string lop, string namhoc, string kyhoc, string buoi)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "ct_diem_danh_search",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@lop", lop,
+                    "@namhoc", namhoc,
+                    "@kyhoc", kyhoc,
+                    "@buoi", buoi);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<CTDiemDanhModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

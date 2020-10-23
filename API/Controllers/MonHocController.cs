@@ -38,5 +38,29 @@ namespace API.Controllers
         {
             return _monhocBusiness.GetDataAll();
         }
+        [Route("search")]
+        [HttpPost]
+        public ResponseModel Search([FromBody] Dictionary<string, object> formData)
+        {
+            var response = new ResponseModel();
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string tenmon = "";
+                if (formData.Keys.Contains("tenmon") && !string.IsNullOrEmpty(Convert.ToString(formData["tenmon"]))) { tenmon   = Convert.ToString(formData["tenmon"]); }
+                long total = 0;
+                var data = _monhocBusiness.Search(page, pageSize, out total, tenmon);
+                response.TotalItems = total;
+                response.Data = data;
+                response.Page = page;
+                response.PageSize = pageSize;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return response;
+        }
     }
 }

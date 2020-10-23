@@ -38,5 +38,29 @@ namespace API.Controllers
         {
             return _lophocBusiness.GetDataAll();
         }
+        [Route("search")]
+        [HttpPost]
+        public ResponseModel Search([FromBody] Dictionary<string, object> formData)
+        {
+            var response = new ResponseModel();
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string tenlop = "";
+                if (formData.Keys.Contains("tenlop") && !string.IsNullOrEmpty(Convert.ToString(formData["tenlop"]))) { tenlop = Convert.ToString(formData["tenlop"]); }
+                long total = 0;
+                var data = _lophocBusiness.Search(page, pageSize, out total, tenlop);
+                response.TotalItems = total;
+                response.Data = data;
+                response.Page = page;
+                response.PageSize = pageSize;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return response;
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace BLL
         bool Create(LopHocModel model);
         LopHocModel GetDatabyID(string id);
         List<LopHocModel> GetDataAll();
+        List<LopHocModel> Search(int pageIndex, int pageSize, out long total, string tenlop);
     }
 }
 

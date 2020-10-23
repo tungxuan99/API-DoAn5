@@ -10,5 +10,6 @@ namespace BLL
         bool Create(TinTucModel model);
         TinTucModel GetDatabyID(string id);
         List<TinTucModel> GetDataAll();
+        List<TinTucModel> Search(int pageIndex, int pageSize, out long total, string tieude);
     }
 }

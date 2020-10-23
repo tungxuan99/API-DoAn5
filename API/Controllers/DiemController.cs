@@ -38,5 +38,35 @@ namespace API.Controllers
         {
             return _diemBusiness.GetDataAll();
         }
+        [Route("search")]
+        [HttpPost]
+        public ResponseModel Search([FromBody] Dictionary<string, object> formData)
+        {
+            var response = new ResponseModel();
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string lop = "";
+                if (formData.Keys.Contains("lop") && !string.IsNullOrEmpty(Convert.ToString(formData["lop"]))) { lop = Convert.ToString(formData["lop"]); }
+                string monhoc = "";
+                if (formData.Keys.Contains("monhoc") && !string.IsNullOrEmpty(Convert.ToString(formData["monhoc"]))) { monhoc = Convert.ToString(formData["monhoc"]); }
+                string buoi = "";
+                if (formData.Keys.Contains("buoi") && !string.IsNullOrEmpty(Convert.ToString(formData["buoi"]))) { buoi = Convert.ToString(formData["buoi"]); }
+                string ngay = "";
+                if (formData.Keys.Contains("ngay") && !string.IsNullOrEmpty(Convert.ToString(formData["ngay"]))) { ngay = Convert.ToString(formData["ngay"]); }
+                long total = 0;
+                var data = _diemBusiness.Search(page, pageSize, out total, lop, monhoc, buoi, ngay);
+                response.TotalItems = total;
+                response.Data = data;
+                response.Page = page;
+                response.PageSize = pageSize;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return response;
+        }
     }
 }

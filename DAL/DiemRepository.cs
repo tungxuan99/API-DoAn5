@@ -52,5 +52,28 @@ namespace DAL
                 throw ex;
             }
         }
+        public List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string namhoc, string kyhoc, string monhoc)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "diem_search",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@lop", lop,
+                    "@namhoc", namhoc,
+                    "@kyhoc", kyhoc,
+                    "@monhoc", monhoc);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<DiemModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

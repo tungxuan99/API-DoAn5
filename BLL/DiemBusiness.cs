@@ -25,6 +25,10 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string monhoc, string buoi, string ngay)
+        {
+            return _res.Search(pageIndex, pageSize, out total, lop, monhoc, buoi, ngay);
+        }
     }
 
 }

@@ -24,7 +24,15 @@ namespace BLL
         {
             return _res.Create(model);
         }
-        public UsersModel GetDatabyID(string id)
+        public bool Update(UsersModel model)
+        {
+            return _res.Update(model);
+        }
+        public bool Delete(int id)
+        {
+            return _res.Delete(id);
+        }
+        public UsersModel GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
         }
@@ -48,6 +56,7 @@ namespace BLL
                 {
                     new Claim(ClaimTypes.Name, user.username.ToString()),
                     new Claim(ClaimTypes.Role, user.level.ToString()),
+                    new Claim(ClaimTypes.UserData, user.HoTen.ToString()),
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

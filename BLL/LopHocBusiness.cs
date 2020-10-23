@@ -25,6 +25,10 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public List<LopHocModel> Search(int pageIndex, int pageSize, out long total, string tenlop)
+        {
+            return _res.Search(pageIndex, pageSize, out total, tenlop);
+        }
     }
 
 }

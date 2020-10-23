@@ -62,16 +62,34 @@ namespace API.Controllers
                 return ex.Message;
             }
         }
-        [Route("create-users")]
+        [Route("delete-user")]
         [HttpPost]
-        public UsersModel CreateCTDiemDanh([FromBody] UsersModel model)
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
         {
+            int user_id=0;
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { user_id = int.Parse(Convert.ToString(formData["id"])); }
+            _usersBusiness.Delete(user_id);
+            return Ok();
+        }
 
+        [Route("create-user")]
+        [HttpPost]
+        public UsersModel CreateUser([FromBody] UsersModel model)
+        {
+            _usersBusiness.Create(model);
+            return model;
+        }
+
+        [Route("update-user")]
+        [HttpPost]
+        public UsersModel UpdateUser([FromBody] UsersModel model)
+        {
+            _usersBusiness.Update(model);
             return model;
         }
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public UsersModel GetDatabyID(string id)
+        public UsersModel GetDatabyID(int id)
         {
             return _usersBusiness.GetDatabyID(id);
         }

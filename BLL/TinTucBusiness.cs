@@ -26,5 +26,9 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public List<TinTucModel> Search(int pageIndex, int pageSize, out long total, string tieude)
+        {
+            return _res.Search(pageIndex, pageSize, out total, tieude);
+        }
     }
 }
