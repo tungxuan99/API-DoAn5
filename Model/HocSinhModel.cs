@@ -10,7 +10,7 @@ namespace Model
         public string MaLopHoc { get; set; }
         public string TenHS { get; set; }
         public string GioiTinh { get; set; }
-        public string NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; }
         public string noisinh { get; set; }
         public string dantoc { get; set; }
         public string hotencha { get; set; }

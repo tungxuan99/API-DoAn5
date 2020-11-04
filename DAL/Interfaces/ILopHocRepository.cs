@@ -8,6 +8,8 @@ namespace DAL
     public partial interface ILopHocRepository
     {
         bool Create(LopHocModel model);
+        bool Update(LopHocModel model);
+        bool Delete(string id);
         LopHocModel GetDatabyID(string id);
         List<LopHocModel> GetDataAll();
 

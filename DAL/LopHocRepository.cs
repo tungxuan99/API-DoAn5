@@ -19,7 +19,62 @@ namespace DAL
         public bool Create(LopHocModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "lop_hoc_create",
+
+                "@malop", model.Tenlophoc,
+                "@tenlop", model.Tenlophoc,
+                "@khoihoc", model.KhoiHoc);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "lop_hoc_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(LopHocModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "lop_hoc_update",
+                "@malop", model.MaLopHoc,
+                "@tenlop", model.Tenlophoc,
+                "@khoihoc", model.KhoiHoc);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public LopHocModel GetDatabyID(string id)
         {

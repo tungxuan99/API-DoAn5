@@ -19,11 +19,29 @@ namespace API.Controllers
             _lophocBusiness = lophocBusiness;
         }
 
+        [Route("delete-lop-hoc")]
+        [HttpPost]
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
+        {
+            string malop = "";
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { malop = Convert.ToString(formData["id"]); }
+            _lophocBusiness.Delete(malop);
+            return Ok();
+        }
+
         [Route("create-lop-hoc")]
         [HttpPost]
-        public LopHocModel CreateCTDiemDanh([FromBody] LopHocModel model)
+        public LopHocModel CreateUser([FromBody] LopHocModel model)
         {
+            _lophocBusiness.Create(model);
+            return model;
+        }
 
+        [Route("update-lop-hoc")]
+        [HttpPost]
+        public LopHocModel UpdateUser([FromBody] LopHocModel model)
+        {
+            _lophocBusiness.Update(model);
             return model;
         }
         [Route("get-by-id/{id}")]

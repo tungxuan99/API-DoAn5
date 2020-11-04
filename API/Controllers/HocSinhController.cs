@@ -32,6 +32,12 @@ namespace API.Controllers
         {
             return _hocsinhBusiness.GetDatabyID(id);
         }
+        [Route("get-by-lop/{malop}")]
+        [HttpGet]
+        public IEnumerable<HocSinhModel> GetDatabyLop(string malop)
+        {
+            return _hocsinhBusiness.GetDataLop(malop);
+        }
         [Route("get-all")]
         [HttpGet]
         public IEnumerable<HocSinhModel> GetDatabAll()

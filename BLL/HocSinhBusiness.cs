@@ -26,6 +26,10 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public List<HocSinhModel> GetDataLop(string malop)
+        {
+            return _res.GetDataLop(malop);
+        }
         public List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten)
         {
             return _res.Search(pageIndex, pageSize, out total, hoten);

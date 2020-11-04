@@ -17,6 +17,14 @@ namespace BLL
         {
             return _res.Create(model);
         }
+        public bool Update(LopHocModel model)
+        {
+            return _res.Update(model);
+        }
+        public bool Delete(string id)
+        {
+            return _res.Delete(id);
+        }
         public LopHocModel GetDatabyID(string id)
         {
             return _res.GetDatabyID(id);

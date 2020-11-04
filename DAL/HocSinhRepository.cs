@@ -27,7 +27,7 @@ namespace DAL
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "hoc_sinh_get_by_id",
-                     "@item_id", id);
+                     "@hs_id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HocSinhModel>().FirstOrDefault();
@@ -43,6 +43,21 @@ namespace DAL
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "hoc_sinh_all");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<HocSinhModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<HocSinhModel> GetDataLop(string malop)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, " ", "@malop", malop);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HocSinhModel>().ToList();
