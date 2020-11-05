@@ -21,14 +21,32 @@ namespace API.Controllers
 
         [Route("create-ctdiem-danh")]
         [HttpPost]
-        public CTDiemDanhModel CreateCTDiemDanh([FromBody] CTDiemDanhModel model)
+        public CTDiemDanhModel CreateUser([FromBody] CTDiemDanhModel model)
         {
+            _ctdiemdanhBusiness.Create(model);
+            return model;
+        }
 
+        [Route("delete-ctdiem-danh")]
+        [HttpPost]
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
+        {
+            int id = 0;
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { id = int.Parse(Convert.ToString(formData["id"])); }
+            _ctdiemdanhBusiness.Delete(id);
+            return Ok();
+        }
+
+        [Route("update-ctdiem-danh")]
+        [HttpPost]
+        public CTDiemDanhModel UpdateUser([FromBody] CTDiemDanhModel model)
+        {
+            _ctdiemdanhBusiness.Update(model);
             return model;
         }
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public CTDiemDanhModel GetDatabyID(string id)
+        public CTDiemDanhModel GetDatabyID(int id)
         {
             return _ctdiemdanhBusiness.GetDatabyID(id);
         }

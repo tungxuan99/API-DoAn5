@@ -19,7 +19,67 @@ namespace DAL
         public bool Create(GiaoVienModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "giao_vien_create",
+                "@MaGV", model.Magv,
+                "@MaMonHoc", model.MaMonHoc,
+                "@TenGV", model.Tengv,
+                "@DiaChi", model.DiaChi,
+                "@SDT", model.SDT,
+                "@password", model.passwordgv);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "giao_vien_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(GiaoVienModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "lop_hoc_update",
+                "@MaGV", model.Magv,
+                "@MaMonHoc", model.MaMonHoc,
+                "@TenGV", model.Tengv,
+                "@DiaChi", model.DiaChi,
+                "@SDT", model.SDT,
+                "@password", model.passwordgv);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public GiaoVienModel GetDatabyID(string id)
         {

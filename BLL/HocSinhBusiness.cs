@@ -18,7 +18,15 @@ namespace BLL
         {
             return _res.Create(model);
         }
-        public HocSinhModel GetDatabyID(string id)
+        public bool Update(HocSinhModel model)
+        {
+            return _res.Update(model);
+        }
+        public bool Delete(int id)
+        {
+            return _res.Delete(id);
+        }
+        public HocSinhModel GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
         }

@@ -29,6 +29,14 @@ namespace API.Controllers
             return Ok();
         }
 
+        [Route("update-lop-hoc")]
+        [HttpPost]
+        public LopHocModel UpdateUser([FromBody] LopHocModel model)
+        {
+            _lophocBusiness.Update(model);
+            return model;
+        }
+
         [Route("create-lop-hoc")]
         [HttpPost]
         public LopHocModel CreateUser([FromBody] LopHocModel model)
@@ -37,13 +45,7 @@ namespace API.Controllers
             return model;
         }
 
-        [Route("update-lop-hoc")]
-        [HttpPost]
-        public LopHocModel UpdateUser([FromBody] LopHocModel model)
-        {
-            _lophocBusiness.Update(model);
-            return model;
-        }
+        
         [Route("get-by-id/{id}")]
         [HttpGet]
         public LopHocModel GetDatabyID(string id)

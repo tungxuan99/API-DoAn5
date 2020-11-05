@@ -17,6 +17,14 @@ namespace BLL
         {
             return _res.Create(model);
         }
+        public bool Update(MonHocModel model)
+        {
+            return _res.Update(model);
+        }
+        public bool Delete(string id)
+        {
+            return _res.Delete(id);
+        }
         public MonHocModel GetDatabyID(string id)
         {
             return _res.GetDatabyID(id);

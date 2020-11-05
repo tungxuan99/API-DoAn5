@@ -19,7 +19,63 @@ namespace DAL
         public bool Create(MonHocModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "mon_hoc_create",
+                "@MaMonHoc", model.MaMonHoc,
+                "@TenMonHoc", model.TenMonHoc,
+                "@SoTiet", model.SoTiet,
+                "@HeSoMonHoc", model.HeSoMonHoc);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Delete(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "mon_hoc_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(MonHocModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "mon_hoc_update",
+                "@MaMonHoc", model.MaMonHoc,
+                "@TenMonHoc", model.TenMonHoc,
+                "@SoTiet", model.SoTiet,
+                "@HeSoMonHoc", model.HeSoMonHoc);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public MonHocModel GetDatabyID(string id)
         {

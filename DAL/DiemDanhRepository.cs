@@ -19,9 +19,67 @@ namespace DAL
         public bool Create(DiemDanhModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_danh_create",
+
+                "@MaLopHoc", model.MaLopHoc,
+                "@MaGV", model.Magv,
+                "@Buoi", model.Buoi,
+                "@NgayDD", model.NgayDD);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        public DiemDanhModel GetDatabyID(string id)
+
+        public bool Delete(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_danh_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(DiemDanhModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_danh_update",
+                "@MaDD", model.MaDD,
+                "@MaLopHoc", model.MaLopHoc,
+                "@MaGV", model.Magv,
+                "@Buoi", model.Buoi,
+                "@NgayDD", model.NgayDD);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DiemDanhModel GetDatabyID(int id)
         {
             string msgError = "";
             try

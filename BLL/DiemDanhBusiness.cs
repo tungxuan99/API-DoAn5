@@ -17,7 +17,15 @@ namespace BLL
         {
             return _res.Create(model);
         }
-        public DiemDanhModel GetDatabyID(string id)
+        public bool Update(DiemDanhModel model)
+        {
+            return _res.Update(model);
+        }
+        public bool Delete(int id)
+        {
+            return _res.Delete(id);
+        }
+        public DiemDanhModel GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
         }

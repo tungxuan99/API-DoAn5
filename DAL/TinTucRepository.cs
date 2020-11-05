@@ -20,9 +20,69 @@ namespace DAL
         public bool Create(TinTucModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "tin_tuc_create",
+                "@MaTinTuc", model.MaTinTuc,
+                "@TieuDe", model.TieuDe,
+                "@NoiDung", model.NoiDung,
+                "@HinhAnh", model.Anh,
+                "@TrangThai", model.TrangThai,
+                "@IDTaiKhoan", model.IDTaiKhoan);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        public TinTucModel GetDatabyID(string id)
+
+        public bool Delete(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "tin_tuc_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(TinTucModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "tin_tuc_update",
+                "@MaTinTuc", model.MaTinTuc,
+                "@TieuDe", model.TieuDe,
+                "@NoiDung", model.NoiDung,
+                "@HinhAnh", model.Anh,
+                "@TrangThai", model.TrangThai,
+                "@IDTaiKhoan", model.IDTaiKhoan);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public TinTucModel GetDatabyID(int id)
         {
             string msgError = "";
             try

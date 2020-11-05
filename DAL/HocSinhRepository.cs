@@ -19,9 +19,77 @@ namespace DAL
         public bool Create(HocSinhModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "hoc_sinh_create",
+                "@MaHS", model.MaHS,
+                "@MaLopHoc", model.MaLopHoc,
+                "@TenHS", model.TenHS,
+                "@GioiTinh", model.GioiTinh,
+                "@NgaySinh", model.NgaySinh,
+                "@NoiSinh", model.noisinh,
+                "@DanToc", model.dantoc,
+                "@HoTenCha", model.hotencha,
+                "@HoTenMe", model.hotenme,
+                "@password", model.passwordhs);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        public HocSinhModel GetDatabyID(string id)
+
+        public bool Delete(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "hoc_sinh_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(HocSinhModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "hoc_sinh_update",
+                "@MaHS", model.MaHS,
+                "@MaLopHoc", model.MaLopHoc,
+                "@TenHS", model.TenHS,
+                "@GioiTinh", model.GioiTinh,
+                "@NgaySinh", model.NgaySinh,
+                "@NoiSinh", model.noisinh,
+                "@DanToc", model.dantoc,
+                "@HoTenCha", model.hotencha,
+                "@HoTenMe", model.hotenme,
+                "@password", model.passwordhs);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public HocSinhModel GetDatabyID(int id)
         {
             string msgError = "";
             try

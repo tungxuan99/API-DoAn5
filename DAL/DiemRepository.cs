@@ -19,9 +19,76 @@ namespace DAL
         public bool Create(DiemModel model)
         {
             string msgError = "";
-            return true;
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_create",
+                "@MaHocKy", model.MaHocKy,
+                "@MaMonHoc", model.MaMonHoc,
+                "@MaHS", model.MaHS,
+                "@MaLopHoc", model.MaLopHoc,
+                "@DiemMieng", model.DiemMieng,
+                "@Diem15Phut", model.Diem15Phut,
+                "@Diem1Tiet", model.Diem1Tiet,
+                "@DiemHK", model.DiemHK,
+                "@DiemTB", model.DiemTB);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        public DiemModel GetDatabyID(string id)
+
+        public bool Delete(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_delete",
+                "@id", id);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool Update(DiemModel model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_update",
+                "@id", model.id,
+                "@MaHocKy", model.MaHocKy,
+                "@MaMonHoc", model.MaMonHoc,
+                "@MaHS", model.MaHS,
+                "@MaLopHoc", model.MaLopHoc,
+                "@DiemMieng", model.DiemMieng,
+                "@Diem15Phut", model.Diem15Phut,
+                "@Diem1Tiet", model.Diem1Tiet,
+                "@DiemHK", model.DiemHK,
+                "@DiemTB", model.DiemTB);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DiemModel GetDatabyID(int id)
         {
             string msgError = "";
             try

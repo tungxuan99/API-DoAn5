@@ -8,7 +8,9 @@ namespace DAL
     public partial interface IHocSinhRepository
     {
         bool Create(HocSinhModel model);
-        HocSinhModel GetDatabyID(string id);
+        bool Update(HocSinhModel model);
+        bool Delete(int id);
+        HocSinhModel GetDatabyID(int id);
         List<HocSinhModel> GetDataAll();
         List<HocSinhModel> GetDataLop(string malop);
         List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten);

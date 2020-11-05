@@ -8,7 +8,9 @@ namespace BLL
     public partial interface IDiemDanhBusiness
     {
         bool Create(DiemDanhModel model);
-        DiemDanhModel GetDatabyID(string id);
+        bool Update(DiemDanhModel model);
+        bool Delete(int id);
+        DiemDanhModel GetDatabyID(int id);
         List<DiemDanhModel> GetDataAll();
         List<DiemDanhModel> Search(int pageIndex, int pageSize, out long total, string monhoc, string buoi, string ngay);
     }
