@@ -19,11 +19,29 @@ namespace API.Controllers
             _giaovienBusiness = giaovienBusiness;
         }
 
+        [Route("delete-giao-vien")]
+        [HttpPost]
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
+        {
+            string malop = "";
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { malop = Convert.ToString(formData["id"]); }
+            _giaovienBusiness.Delete(malop);
+            return Ok();
+        }
+
+        [Route("update-giao-vien")]
+        [HttpPost]
+        public GiaoVienModel UpdateUser([FromBody] GiaoVienModel model)
+        {
+            _giaovienBusiness.Update(model);
+            return model;
+        }
+
         [Route("create-giao-vien")]
         [HttpPost]
-        public GiaoVienModel CreateCTDiemDanh([FromBody] GiaoVienModel model)
+        public GiaoVienModel CreateUser([FromBody] GiaoVienModel model)
         {
-
+            _giaovienBusiness.Create(model);
             return model;
         }
         [Route("get-by-id/{id}")]

@@ -19,11 +19,29 @@ namespace API.Controllers
             _monhocBusiness = monhocBusiness;
         }
 
+        [Route("delete-mon-hoc")]
+        [HttpPost]
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
+        {
+            string malop = "";
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { malop = Convert.ToString(formData["id"]); }
+            _monhocBusiness.Delete(malop);
+            return Ok();
+        }
+
+        [Route("update-mon-hoc")]
+        [HttpPost]
+        public MonHocModel UpdateUser([FromBody] MonHocModel model)
+        {
+            _monhocBusiness.Update(model);
+            return model;
+        }
+
         [Route("create-mon-hoc")]
         [HttpPost]
-        public MonHocModel CreateCTDiemDanh([FromBody] MonHocModel model)
+        public MonHocModel CreateUser([FromBody] MonHocModel model)
         {
-
+            _monhocBusiness.Create(model);
             return model;
         }
         [Route("get-by-id/{id}")]

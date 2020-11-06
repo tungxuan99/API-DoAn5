@@ -21,14 +21,32 @@ namespace API.Controllers
 
         [Route("create-diem")]
         [HttpPost]
-        public DiemModel CreateCTDiemDanh([FromBody] DiemModel model)
+        public DiemModel CreateUser([FromBody] DiemModel model)
         {
+            _diemBusiness.Create(model);
+            return model;
+        }
 
+        [Route("delete-diem")]
+        [HttpPost]
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
+        {
+            int id = 0;
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { id = int.Parse(Convert.ToString(formData["id"])); }
+            _diemBusiness.Delete(id);
+            return Ok();
+        }
+
+        [Route("update-diem")]
+        [HttpPost]
+        public DiemModel UpdateUser([FromBody] DiemModel model)
+        {
+            _diemBusiness.Update(model);
             return model;
         }
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public DiemModel GetDatabyID(string id)
+        public DiemModel GetDatabyID(int id)
         {
             return _diemBusiness.GetDatabyID(id);
         }

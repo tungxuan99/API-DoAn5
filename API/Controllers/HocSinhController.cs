@@ -21,14 +21,32 @@ namespace API.Controllers
 
         [Route("create-hoc-sinh")]
         [HttpPost]
-        public HocSinhModel CreateHocSinh([FromBody] HocSinhModel model)
+        public HocSinhModel CreateUser([FromBody] HocSinhModel model)
         {
+            _hocsinhBusiness.Create(model);
+            return model;
+        }
 
+        [Route("delete-hoc-sinh")]
+        [HttpPost]
+        public IActionResult DeleteUser([FromBody] Dictionary<string, object> formData)
+        {
+            int id = 0;
+            if (formData.Keys.Contains("id") && !string.IsNullOrEmpty(Convert.ToString(formData["id"]))) { id = int.Parse(Convert.ToString(formData["id"])); }
+            _hocsinhBusiness.Delete(id);
+            return Ok();
+        }
+
+        [Route("update-hoc-sinh")]
+        [HttpPost]
+        public HocSinhModel UpdateUser([FromBody] HocSinhModel model)
+        {
+            _hocsinhBusiness.Update(model);
             return model;
         }
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public HocSinhModel GetDatabyID(string id)
+        public HocSinhModel GetDatabyID(int id)
         {
             return _hocsinhBusiness.GetDatabyID(id);
         }
