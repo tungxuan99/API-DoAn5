@@ -125,7 +125,7 @@ namespace DAL
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, " ", "@malop", malop);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError,"hoc_sinh_by_lop", "@malop", malop);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HocSinhModel>().ToList();
