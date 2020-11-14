@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DAL
@@ -11,6 +12,7 @@ namespace DAL
         bool Update(DiemModel model);
         bool Delete(int id);
         DiemModel GetDatabyID(int id);
+        List<DiemHS> GetDatabyHSHK(int MaHS, string MaHK);
         List<DiemModel> GetDataAll();
         List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string namhoc, string kyhoc, string monhoc);
     }

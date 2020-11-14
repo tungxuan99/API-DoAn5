@@ -2,6 +2,7 @@
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BLL
@@ -28,6 +29,10 @@ namespace BLL
         public DiemModel GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
+        }
+        public List<DiemHS> GetDatabyHSHK(int MaHS, string MaHK)
+        {
+            return _res.GetDatabyHSHK(MaHS, MaHK);
         }
         public List<DiemModel> GetDataAll()
         {

@@ -50,6 +50,12 @@ namespace API.Controllers
         {
             return _diemBusiness.GetDatabyID(id);
         }
+        [Route("get-by-hs-hk/{MaHS}/{MaHK}")]
+        [HttpGet]
+        public List<DiemHS> GetDatabyHSHK(int MaHS, string MaHK)
+        {
+            return _diemBusiness.GetDatabyHSHK(MaHS, MaHK);
+        }
         [Route("get-all")]
         [HttpGet]
         public IEnumerable<DiemModel> GetDatabAll()
