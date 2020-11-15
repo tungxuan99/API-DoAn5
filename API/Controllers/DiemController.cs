@@ -56,6 +56,12 @@ namespace API.Controllers
         {
             return _diemBusiness.GetDatabyHSHK(MaHS, MaHK);
         }
+        [Route("xem-diem-hk/{Search}/{MaHK}")]
+        [HttpGet]
+        public List<XemDiemHK> GetDataDiemHK(string Search, string MaHK)
+        {
+            return _diemBusiness.GetDataDiemHK(Search, MaHK);
+        }
         [Route("get-all")]
         [HttpGet]
         public IEnumerable<DiemModel> GetDatabAll()

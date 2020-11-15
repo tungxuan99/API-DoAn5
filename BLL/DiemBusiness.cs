@@ -34,6 +34,10 @@ namespace BLL
         {
             return _res.GetDatabyHSHK(MaHS, MaHK);
         }
+        public List<XemDiemHK> GetDataDiemHK(string Search, string MaHK)
+        {
+            return _res.GetDataDiemHK(Search, MaHK);
+        }
         public List<DiemModel> GetDataAll()
         {
             return _res.GetDataAll();

@@ -6,7 +6,7 @@ namespace Model
 {
     public class GiaoVienModel
     {
-        public string Magv { get; set; }
+        public int Magv { get; set; }
         public string MaMonHoc { get; set; }
         public string Tengv { get; set; }
         public string DiaChi { get; set; }

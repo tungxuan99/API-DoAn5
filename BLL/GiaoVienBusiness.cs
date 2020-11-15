@@ -21,11 +21,11 @@ namespace BLL
         {
             return _res.Update(model);
         }
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
             return _res.Delete(id);
         }
-        public GiaoVienModel GetDatabyID(string id)
+        public GiaoVienModel GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
         }

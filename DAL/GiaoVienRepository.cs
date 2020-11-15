@@ -22,7 +22,6 @@ namespace DAL
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "giao_vien_create",
-                "@MaGV", model.Magv,
                 "@MaMonHoc", model.MaMonHoc,
                 "@TenGV", model.Tengv,
                 "@DiaChi", model.DiaChi,
@@ -40,7 +39,7 @@ namespace DAL
             }
         }
 
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
             string msgError = "";
             try
@@ -63,7 +62,7 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "lop_hoc_update",
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "giao_vien_update",
                 "@MaGV", model.Magv,
                 "@MaMonHoc", model.MaMonHoc,
                 "@TenGV", model.Tengv,
@@ -81,12 +80,12 @@ namespace DAL
                 throw ex;
             }
         }
-        public GiaoVienModel GetDatabyID(string id)
+        public GiaoVienModel GetDatabyID(int id)
         {
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "gv_get_by_id",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "giao_vien_get_by_id",
                      "@item_id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);

@@ -120,6 +120,44 @@ namespace DAL
                 throw ex;
             }
         }
+        public List<XemDiemHK> GetDataDiemHK(string Search, string MaHK)
+        {
+            string msgError = "";
+            int MaHS = 0;
+            string TenHS="";
+            bool kt= int.TryParse(Search, out MaHS);
+            if (kt == false)
+            {
+                TenHS = Search;
+                try
+                {
+                    var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "xem_diem_get_by_tenhs_hk",
+                         "@TenHS", TenHS, "@MaHocKy", MaHK);
+                    if (!string.IsNullOrEmpty(msgError))
+                        throw new Exception(msgError);
+                    return dt.ConvertTo<XemDiemHK>().ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                try
+                {
+                    var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "xem_diem_get_by_mahs_hk",
+                          "@MaHS", MaHS, "@MaHocKy", MaHK);
+                    if (!string.IsNullOrEmpty(msgError))
+                        throw new Exception(msgError);
+                    return dt.ConvertTo<XemDiemHK>().ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
         public List<DiemModel> GetDataAll()
         {
             string msgError = "";

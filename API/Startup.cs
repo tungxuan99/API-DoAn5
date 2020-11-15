@@ -41,6 +41,7 @@ namespace API
         {
             services.AddCors();
             services.AddControllers();
+            
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
@@ -66,7 +67,7 @@ namespace API
                     ValidateAudience = false
                 };
             });
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddTransient<IDatabaseHelper, DatabaseHelper>();
             services.AddTransient<ITinTucRepository, TinTucRepository>();
             services.AddTransient<ITinTucBusiness, TinTucBusiness>();

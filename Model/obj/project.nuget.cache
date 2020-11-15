@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Ym4ufA5cSF/QKXG2SnW/qXoPfLQM13KK0j6ZbTak1Uni5C/9+T3rqC4vGsk1NRIEOdadie1qZ0GxsgK3IhXUKw==",
+  "dgSpecHash": "oXOoLG5acDMGu3ObjSuQtovWqZ2L2gqRJNFmqLm3NqWseVOQ/8Q0IQRlQXCabrafkstKDV+rKqWTd8uGbqckEQ==",
   "success": true,
   "projectFilePath": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\xuant\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.1\\microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512",
+    "C:\\Users\\xuant\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.1\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512",
+    "C:\\Users\\xuant\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\xuant\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\xuant\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
