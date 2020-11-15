@@ -13,6 +13,7 @@ namespace BLL
         bool Delete(int id);
         DiemModel GetDatabyID(int id);
         List<DiemHS> GetDatabyHSHK(int MaHS, string MaHK);
+        List<TopDiem> GetDataTop10Diem(string MaHK);
         List<XemDiemHK> GetDataDiemHK(string Search, string MaHK);
         List<DiemModel> GetDataAll();
         List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string monhoc, string buoi, string ngay);

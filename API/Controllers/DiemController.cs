@@ -56,6 +56,12 @@ namespace API.Controllers
         {
             return _diemBusiness.GetDatabyHSHK(MaHS, MaHK);
         }
+        [Route("top-10-diem-by-hk/{MaHK}")]
+        [HttpGet]
+        public List<TopDiem> GetDataTop10Diem(string MaHK)
+        {
+            return _diemBusiness.GetDataTop10Diem(MaHK);
+        }
         [Route("xem-diem-hk/{Search}/{MaHK}")]
         [HttpGet]
         public List<XemDiemHK> GetDataDiemHK(string Search, string MaHK)
