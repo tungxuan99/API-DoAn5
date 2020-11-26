@@ -11,6 +11,7 @@ namespace DAL
         bool Update(HocSinhModel model);
         bool Delete(int id);
         HocSinhModel GetDatabyID(int id);
+        List<HocSinhModel> GetDataDiemHK(string Search);
         List<HocSinhModel> GetDataAll();
         List<HocSinhModel> GetDataLop(string malop);
         List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten);

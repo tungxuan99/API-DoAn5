@@ -10,6 +10,7 @@ namespace BLL.Interfaces
         bool Create(HocSinhModel model);
         bool Update(HocSinhModel model);
         bool Delete(int id);
+        List<HocSinhModel> GetDataDiemHK(string Search);
         HocSinhModel GetDatabyID(int id);
         List<HocSinhModel> GetDataAll();
         List<HocSinhModel> GetDataLop(string malop);

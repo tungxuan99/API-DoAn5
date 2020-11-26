@@ -56,6 +56,12 @@ namespace API.Controllers
         {
             return _hocsinhBusiness.GetDataLop(malop);
         }
+        [Route("get-by-ten-mahs/{Search}")]
+        [HttpGet]
+        public IEnumerable<HocSinhModel> GetDataDiemHK(string Search)
+        {
+            return _hocsinhBusiness.GetDataDiemHK(Search);
+        }
         [Route("get-all")]
         [HttpGet]
         public IEnumerable<HocSinhModel> GetDatabAll()

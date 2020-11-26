@@ -89,6 +89,44 @@ namespace DAL
                 throw ex;
             }
         }
+        public List<HocSinhModel> GetDataDiemHK(string Search)
+        {
+            string msgError = "";
+            int MaHS = 0;
+            string TenHS = "";
+            bool kt = int.TryParse(Search, out MaHS);
+            if (kt == false)
+            {
+                TenHS = Search;
+                try
+                {
+                    var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "hoc_sinh_get_by_ten",
+                         "@TenHS", TenHS);
+                    if (!string.IsNullOrEmpty(msgError))
+                        throw new Exception(msgError);
+                    return dt.ConvertTo<HocSinhModel>().ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                try
+                {
+                    var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "hoc_sinh_get_by_id",
+                          "@hs_id", MaHS);
+                    if (!string.IsNullOrEmpty(msgError))
+                        throw new Exception(msgError);
+                    return dt.ConvertTo<HocSinhModel>().ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
         public HocSinhModel GetDatabyID(int id)
         {
             string msgError = "";
