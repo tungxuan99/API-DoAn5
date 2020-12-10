@@ -30,7 +30,7 @@ namespace DAL
                 "@Diem15Phut", model.Diem15Phut,
                 "@Diem1Tiet", model.Diem1Tiet,
                 "@DiemHK", model.DiemHK,
-                "@DiemTB", model.DiemTB);
+                "@DiemTB", Math.Round(model.DiemTB,2));
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
