@@ -82,8 +82,8 @@ namespace DAL
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "mon_get_by_id",
-                     "@item_id", id);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "mon_hoc_get_by_id",
+                     "@MaMon", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<MonHocModel>().FirstOrDefault();
