@@ -38,6 +38,10 @@ namespace BLL
         {
             return _res.GetDataTop10Diem(MaHK);
         }
+        public List<DiemTBMon> GetDiemTBMonbyHK(string MaHK)
+        {
+            return _res.GetDiemTBMonbyHK(MaHK);
+        }
         public List<XemDiemHK> GetDataDiemHK(string Search, string MaHK)
         {
             return _res.GetDataDiemHK(Search, MaHK);

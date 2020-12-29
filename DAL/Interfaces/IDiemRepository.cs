@@ -14,6 +14,7 @@ namespace DAL
         DiemModel GetDatabyID(int id);
         List<DiemHS> GetDatabyHSHK(int MaHS, string MaHK);
         List<TopDiem> GetDataTop10Diem(string MaHK);
+        List<DiemTBMon> GetDiemTBMonbyHK(string MaHocKy);
         List<XemDiemHK> GetDataDiemHK(string Search, string MaHK);
         List<DiemModel> GetDataAll();
         List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string namhoc, string kyhoc, string monhoc);
