@@ -39,7 +39,7 @@ namespace API.Controllers
 
         [Route("update-diem")]
         [HttpPost]
-        public DiemModel UpdateUser([FromBody] DiemModel model)
+        public DiemModel UpdateDiem([FromBody] DiemModel model)
         {
             _diemBusiness.Update(model);
             return model;
@@ -67,6 +67,12 @@ namespace API.Controllers
         public List<DiemTBMon> GetDiemTBMonbyHK(string MaHK)
         {
             return _diemBusiness.GetDiemTBMonbyHK(MaHK);
+        }
+        [Route("get-diemtb-by-hk/{MaHK}")]
+        [HttpGet]
+        public List<DiemTBHK> GetDiemTBbyHK(string MaHK)
+        {
+            return _diemBusiness.GetDiemTBbyHK(MaHK);
         }
         [Route("xem-diem-hk/{Search}/{MaHK}")]
         [HttpGet]

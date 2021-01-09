@@ -6,6 +6,7 @@ namespace Model
 {
     public class DiemHS
     {
+        public string MaMonHoc { get; set; }
         public string TenMonHoc { get; set; }
         public string DiemMieng { get; set; }
         public string Diem15Phut { get; set; }

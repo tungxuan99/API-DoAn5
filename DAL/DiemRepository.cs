@@ -120,6 +120,22 @@ namespace DAL
                 throw ex;
             }
         }
+        public List<DiemTBHK> GetDiemTBbyHK(string MaHocKy)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "DiemTBKyHoc",
+                     "@KyHoc", MaHocKy);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<DiemTBHK>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public List<DiemHS> GetDatabyHSHK(int MaHS, string MaHK)
         {
             string msgError = "";

@@ -17,6 +17,7 @@ namespace BLL
         List<DiemTBMon> GetDiemTBMonbyHK(string MaHocKy);
         List<XemDiemHK> GetDataDiemHK(string Search, string MaHK);
         List<DiemModel> GetDataAll();
+        List<DiemTBHK> GetDiemTBbyHK(string MaHocKy);
         List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string monhoc, string buoi, string ngay);
     }
 }
