@@ -86,6 +86,14 @@ namespace API.Controllers
         {
             return _diemBusiness.GetDataAll();
         }
+
+        [Route("xem-diem-tb-mon-by-lop/{MaLop}/{MaHocKy}")]
+        [HttpGet]
+        public List<XemDiemLop> GetDiemByLopMaHK(string MaLop, string MaHocKy)
+        {
+            return _diemBusiness.GetDiemByLopMaHK(MaLop, MaHocKy);
+        }
+
         [Route("search")]
         [HttpPost]
         public ResponseModel Search([FromBody] Dictionary<string, object> formData)

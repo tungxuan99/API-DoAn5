@@ -10,3 +10,15 @@ F:\DOAN5\DoAn5-API\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
 F:\DOAN5\DoAn5-API\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 F:\DOAN5\DoAn5-API\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 F:\DOAN5\DoAn5-API\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

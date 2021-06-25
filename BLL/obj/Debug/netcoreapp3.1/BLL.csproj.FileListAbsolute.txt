@@ -12,3 +12,17 @@ F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
 F:\DOAN5\DoAn5-API\BLL\bin\Debug\netcoreapp3.1\Model.pdb
 F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
 F:\DOAN5\DoAn5-API\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+C:\Users\Admin\Desktop\DoAnTotNghiep\API-DoAn5\BLL\obj\Debug\netcoreapp3.1\BLL.pdb

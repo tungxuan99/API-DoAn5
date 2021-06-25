@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\DOAN5\\DoAn5-API\\DAL\\DAL.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "F:\\DOAN5\\DoAn5-API\\DAL\\DAL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\DOAN5\\DoAn5-API\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "F:\\DOAN5\\DoAn5-API\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\xuant\\.nuget\\packages\\",
-        "outputPath": "F:\\DOAN5\\DoAn5-API\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\xuant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,9 +26,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj": {
-                "projectPath": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj"
+              "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj"
               }
             }
           }
@@ -41,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
@@ -70,28 +72,25 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj": {
+    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\xuant\\.nuget\\packages\\",
-        "outputPath": "F:\\DOAN5\\DoAn5-API\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\xuant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,6 +102,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -114,6 +114,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
@@ -131,14 +132,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -152,6 +152,7 @@ namespace DAL
                 throw ex;
             }
         }
+
         public List<TopDiem> GetDataTop10Diem(string MaHK)
         {
             string msgError = "";
@@ -221,6 +222,24 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public List<XemDiemLop> GetDiemByLopMaHK(string MaLop, string MaHocKy)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "xem_diem_get_by_malop_mahk",
+                     "@MaLop", MaLop, "@MaHK", MaHocKy);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<XemDiemLop>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string namhoc, string kyhoc, string monhoc)
         {
             string msgError = "";

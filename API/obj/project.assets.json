@@ -530,10 +530,7 @@
         },
         "runtime": {
           "bin/placeholder/BLL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "DAL/1.0.0": {
         "type": "project",
@@ -550,10 +547,7 @@
         },
         "runtime": {
           "bin/placeholder/DAL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Model/1.0.0": {
         "type": "project",
@@ -566,10 +560,7 @@
         },
         "runtime": {
           "bin/placeholder/Model.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -1613,19 +1604,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xuant\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\DOAN5\\DoAn5-API\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "F:\\DOAN5\\DoAn5-API\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\xuant\\.nuget\\packages\\",
-      "outputPath": "F:\\DOAN5\\DoAn5-API\\API\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xuant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1637,12 +1628,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\DOAN5\\DoAn5-API\\BLL\\BLL.csproj": {
-              "projectPath": "F:\\DOAN5\\DoAn5-API\\BLL\\BLL.csproj"
+            "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\BLL\\BLL.csproj"
             },
-            "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj": {
-              "projectPath": "F:\\DOAN5\\DoAn5-API\\Model\\Model.csproj"
+            "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj"
             }
           }
         }
@@ -1655,6 +1647,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -1683,7 +1676,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
