@@ -173,7 +173,7 @@ namespace DAL
                 throw ex;
             }
         }
-        public List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten)
+        public List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten, string malophoc, string khoihoc)
         {
             string msgError = "";
             total = 0;
@@ -182,7 +182,9 @@ namespace DAL
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "hoc_sinh_search",
                     "@page_index", pageIndex,
                     "@page_size", pageSize,
-                    "@hoten", hoten);
+                    "@hoten", hoten,
+                    "@malophoc", malophoc,
+                    "@khoihoc", khoihoc);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];

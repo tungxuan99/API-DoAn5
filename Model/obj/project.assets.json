@@ -225,11 +225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

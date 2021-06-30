@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj"
+              "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj": {
+    "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

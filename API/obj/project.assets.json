@@ -1609,11 +1609,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\API\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1630,11 +1630,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\BLL\\BLL.csproj"
+            "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj"
+            "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj"
             }
           }
         }

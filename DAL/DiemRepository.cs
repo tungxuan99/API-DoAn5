@@ -22,15 +22,16 @@ namespace DAL
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_create",
-                "@MaHocKy", model.MaHocKy,
-                "@MaMonHoc", model.MaMonHoc,
-                "@MaHS", model.MaHS,
-                "@MaLopHoc", model.MaLopHoc,
-                "@DiemMieng", model.DiemMieng,
-                "@Diem15Phut", model.Diem15Phut,
-                "@Diem1Tiet", model.Diem1Tiet,
-                "@DiemHK", model.DiemHK,
-                "@DiemTB", Math.Round(model.DiemTB,2));
+                "@diem_id", model.id,
+                "@diem_MaHocKy ", model.MaHocKy,
+                "@diem_MaMonHoc  ", model.MaMonHoc,
+                "@diem_MaHS ", model.MaHS,
+                "@diem_MaLop ", model.MaLopHoc,
+                "@diem_DiemMieng", model.DiemMieng,
+                "@diem_Diem15Phut", model.Diem15Phut,
+                "@diem_Diem1Tiet", model.Diem1Tiet,
+                "@diem_DiemHK", model.DiemHK,
+                "@diem_DiemTB", Math.Round(model.DiemTB,2));
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -67,16 +68,16 @@ namespace DAL
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "diem_update",
-                "@id", model.id,
-                "@MaHocKy", model.MaHocKy,
-                "@MaMonHoc", model.MaMonHoc,
-                "@MaHS", model.MaHS,
-                "@MaLopHoc", model.MaLopHoc,
-                "@DiemMieng", model.DiemMieng,
-                "@Diem15Phut", model.Diem15Phut,
-                "@Diem1Tiet", model.Diem1Tiet,
-                "@DiemHK", model.DiemHK,
-                "@DiemTB", model.DiemTB);
+                "@diem_id", model.id,
+                "@diem_MaHocKy", model.MaHocKy,
+                "@diem_MaMonHoc", model.MaMonHoc,
+                "@diem_MaHS", model.MaHS,
+                "@diem_MaLop", model.MaLopHoc,
+                "@diem_DiemMieng", model.DiemMieng,
+                "@diem_Diem15Phut", model.Diem15Phut,
+                "@diem_Diem1Tiet", model.Diem1Tiet,
+                "@diem_DiemHK", model.DiemHK,
+                "@diem_DiemTB", model.DiemTB);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -153,6 +154,23 @@ namespace DAL
             }
         }
 
+        public List<XemDiemMon> GetDiemByLopMaHKMon(string MaLop, string MaHocKy, string MaMon)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "xem_diem_get_by_malop_hk_mon",
+                     "@MaLop", MaLop, "@MaHocKy", MaHocKy, "@MaMon", MaMon);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<XemDiemMon>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<TopDiem> GetDataTop10Diem(string MaHK)
         {
             string msgError = "";
@@ -216,6 +234,22 @@ namespace DAL
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<DiemModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DiemModel GetEndDiem()
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "enddiem");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<DiemModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {

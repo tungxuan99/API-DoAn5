@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NzK8uo6KGHZxDk7OuKAOnA//S97Er9mr1FK3Z/ul78tg+EbhWcruOWWFhSY7Jo8pDBI5FdCIvgM/mknddyWCsA==",
+  "dgSpecHash": "NxZkHU7ZyGdFbSNuVe6HlFO4axi/foo7EvQgtmKZZAZLvbPsZTOr4J26iTvTwX0fIuPxEQahN1UpI6ecYD1UEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\Model\\Model.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\Model\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.1\\microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.1\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512",

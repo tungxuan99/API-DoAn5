@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2H9xSSuO3eCdQTCd2XuQ4kkGAJNZqFE9ZcQjzd3EVTEB2bQ04jq7yNXx/kHY69JnDUk/q0XUMBa2Oz8LC9qh+w==",
+  "dgSpecHash": "kTPw2oyEeCwTPrRrISlPw32b85jDgxNGbOLSCLj15puOB7S2RL9atinxRMSCULmL/SkrczrrOt7V5ZQHc9QCHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAn5\\BLL\\BLL.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\DoAnTotNghiep\\API-DoAnTotNghiep\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\3.1.9\\microsoft.aspnetcore.dataprotection.3.1.9.nupkg.sha512",

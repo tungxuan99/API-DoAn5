@@ -78,9 +78,13 @@ namespace API.Controllers
                 var page = int.Parse(formData["page"].ToString());
                 var pageSize = int.Parse(formData["pageSize"].ToString());
                 string hoten = "";
+                string malophoc = "";
+                string khoihoc = "";
                 if (formData.Keys.Contains("hoten") && !string.IsNullOrEmpty(Convert.ToString(formData["hoten"]))) { hoten = Convert.ToString(formData["hoten"]); }
+                if (formData.Keys.Contains("malophoc") && !string.IsNullOrEmpty(Convert.ToString(formData["malophoc"]))) { malophoc = Convert.ToString(formData["malophoc"]); }
+                if (formData.Keys.Contains("khoihoc") && !string.IsNullOrEmpty(Convert.ToString(formData["khoihoc"]))) { khoihoc = Convert.ToString(formData["khoihoc"]); }
                 long total = 0;
-                var data = _hocsinhBusiness.Search(page, pageSize, out total, hoten);
+                var data = _hocsinhBusiness.Search(page, pageSize, out total, hoten, malophoc, khoihoc);
                 response.TotalItems = total;
                 response.Data = data;
                 response.Page = page;

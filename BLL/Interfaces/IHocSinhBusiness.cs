@@ -14,6 +14,6 @@ namespace BLL.Interfaces
         HocSinhModel GetDatabyID(int id);
         List<HocSinhModel> GetDataAll();
         List<HocSinhModel> GetDataLop(string malop);
-        List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten);
+        List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten, string malophoc, string khoihoc);
     }
 }

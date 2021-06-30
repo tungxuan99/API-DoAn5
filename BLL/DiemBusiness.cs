@@ -54,9 +54,18 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public DiemModel GetEndDiem()
+        {
+            return _res.GetEndDiem();
+        }
         public List<XemDiemLop> GetDiemByLopMaHK(string MaLop, string MaHocKy)
         {
             return _res.GetDiemByLopMaHK(MaLop, MaHocKy);
+        }
+
+        public List<XemDiemMon> GetDiemByLopMaHKMon(string MaLop, string MaHocKy, string MaMon)
+        {
+            return _res.GetDiemByLopMaHKMon(MaLop, MaHocKy, MaMon);
         }
         public List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string monhoc, string buoi, string ngay)
         {

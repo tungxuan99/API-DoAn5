@@ -43,9 +43,9 @@ namespace BLL
         {
             return _res.GetDataDiemHK(Search);
         }
-        public List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten)
+        public List<HocSinhModel> Search(int pageIndex, int pageSize, out long total, string hoten, string malophoc, string khoihoc)
         {
-            return _res.Search(pageIndex, pageSize, out total, hoten);
+            return _res.Search(pageIndex, pageSize, out total, hoten, malophoc, khoihoc);
         }
     }
 }

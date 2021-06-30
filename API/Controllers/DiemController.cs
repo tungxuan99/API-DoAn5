@@ -86,12 +86,25 @@ namespace API.Controllers
         {
             return _diemBusiness.GetDataAll();
         }
+        [Route("get-end-diem")]
+        [HttpGet]
+        public DiemModel GetEndDiem()
+        {
+            return _diemBusiness.GetEndDiem();
+        }
 
         [Route("xem-diem-tb-mon-by-lop/{MaLop}/{MaHocKy}")]
         [HttpGet]
         public List<XemDiemLop> GetDiemByLopMaHK(string MaLop, string MaHocKy)
         {
             return _diemBusiness.GetDiemByLopMaHK(MaLop, MaHocKy);
+        }
+
+        [Route("xem-diem-tb-mon-by-mon/{MaLop}/{MaHocKy}/{MaMon}")]
+        [HttpGet]
+        public List<XemDiemMon> GetDiemByLopMaHKMon(string MaLop, string MaHocKy, string MaMon)
+        {
+            return _diemBusiness.GetDiemByLopMaHKMon(MaLop, MaHocKy, MaMon);
         }
 
         [Route("search")]

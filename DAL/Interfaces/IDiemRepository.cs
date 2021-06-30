@@ -19,6 +19,9 @@ namespace DAL
         List<DiemModel> GetDataAll();
         List<DiemTBHK> GetDiemTBbyHK(string MaHocKy);
         List<XemDiemLop> GetDiemByLopMaHK(string MaLop, string MaHocKy);
+        List<XemDiemMon> GetDiemByLopMaHKMon(string MaLop, string MaHocKy, string MaMon);
+
+        DiemModel GetEndDiem();
         List<DiemModel> Search(int pageIndex, int pageSize, out long total, string lop, string namhoc, string kyhoc, string monhoc);
     }
 }
